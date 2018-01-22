@@ -162,92 +162,92 @@ Section 6:
 Section 7:
 ** Column descriptions for Build CSV sheet **
 
-Column Title                Column Description           
+Column Title                	Column Description           
 
-1) S.No				             Serial Number of LPAR list. This is a required field
+1) S.No:-				             Serial Number of LPAR list. This is a required field
 
-2) lpar_name		           Name of LPAR / VM. This is a required field
+2) lpar_name:-		           Name of LPAR / VM. This is a required field
 
-3) image				           Image to be used for deploy. This is a required field
+3) image:-				           Image to be used for deploy. This is a required field
 
-4) spec_type		           Specification Type can be openstack (or) powervm
+4) spec_type:-		           Specification Type can be openstack (or) powervm
 
-5) compute_template        Compute Template (Flavor).
-													 This is a required field when spec_type is openstack
+5) compute_template:-        Compute Template (Flavor).
+													 	 This is a required field when spec_type is openstack
 
-6) additional_disk_file    File Name to provide specs for additional disks.
-													 Specify none if there are no additional disks
+6) additional_disk_file:-    File Name to provide specs for additional disks.
+													 	 Specify none if there are no additional disks
 
-7) network_name				     Name of the network
+7) network_name:-				     Name of the network
 
-8) ip_address					     IP Address for the LPAR
-													 Specify 'auto' if you want IP be picked from the pool
-													 Specify valid IP address if you need specific IP address
+8) ip_address:-					     IP Address for the LPAR
+													 	 Specify 'auto' if you want IP be picked from the pool
+													 	 Specify valid IP address if you need specific IP address
 
-9) desired_ec					     Desired Entitled Capacity.
-													 This is required when spec_type is powervm
+9) desired_ec:-					     Desired Entitled Capacity.
+														 This is required when spec_type is powervm
 
-10) desired_vcpu				   Desired Virutal CPU.
-													 This is required when spec_type is powervm
+10) desired_vcpu:-				   Desired Virutal CPU.
+													 	 This is required when spec_type is powervm
 
-11) desired_mem					   Desired Memory (MB).
-													 This is required when spec_type is powervm
+11) desired_mem:-					   Desired Memory (MB).
+													 	 This is required when spec_type is powervm
 
-12) min_ec						     Minimum Entitled Capacity.
-													 This is required when spec_type is powervm
+12) min_ec:-						     Minimum Entitled Capacity.
+														 This is required when spec_type is powervm
 
-13) max_ec						     Maximum Entitled Capacity.
-													 This is required when spec_type is powervm
+13) max_ec:-						     Maximum Entitled Capacity.
+														 This is required when spec_type is powervm
 
-14) min_vcpu					     Minimum Virtual CPU.
-													 This is required when spec_type is powervm
+14) min_vcpu:-					     Minimum Virtual CPU.
+														 This is required when spec_type is powervm
 
-15) max_vcpu					     Maximum Virtual CPU.
-													 This is required when spec_type is powervm
+15) max_vcpu:-					     Maximum Virtual CPU.
+														 This is required when spec_type is powervm
 
-16) shared_weight				   Uncapped Shared Weight. Value must be (0 - 255)
-													 This is required when spec_type is powervm
+16) shared_weight:-				   Uncapped Shared Weight. Value must be (0 - 255)
+														 This is required when spec_type is powervm
 
-17) shared_proc_pool_name  Shared Processor Pool Name.
-													 This is required when spec_type is powervm
+17) shared_proc_pool_name:-  Shared Processor Pool Name.
+														 This is required when spec_type is powervm
 
-18) min_mem						     Minimum Memory.
-													 This is required when spec_type is powervm
+18) min_mem:-						     Minimum Memory.
+														 This is required when spec_type is powervm
 
-19) max_mem						     Maximum Memory.
-													 This is required when spec_type is powervm
+19) max_mem:-						     Maximum Memory.
+														 This is required when spec_type is powervm
 
-20) proc_comp_mode				 Processor Compatibility Mode.
-													 This is required when spec_type is powervm
+20) proc_comp_mode:-				 Processor Compatibility Mode.
+														 This is required when spec_type is powervm
 
-21) stor_conn_grp				   Storage Connectivity Group Name.
-													 This is required when spec_type is powervm
+21) stor_conn_grp:-				   Storage Connectivity Group Name.
+														 This is required when spec_type is powervm
 
-22) srr_cap						     Simplified Remote Restart Capability. Specify true or false
-													 This is required when spec_type is powervm.
+22) srr_cap:-						     Simplified Remote Restart Capability. Specify true or false
+														 This is required when spec_type is powervm.
 
-23) availability_priority	 Availability priority Value must be (0 - 255)
-													 This is required when spec_type is powervm
+23) availability_priority:-	 	 Availability priority Value must be (0 - 255)
+															 This is required when spec_type is powervm
 
 Section 8:
 ** Column descriptions for Additional Storage CSV sheet **
 
 Column Title                Column Description
 
-1) lpar_name					   VM name for which disks to be attached        
-												 This is a required field
+1) lpar_name:-					   VM name for which disks to be attached        
+												 	 This is a required field
 
-2) num_of_disks				   Number of Disks to be attached
-												 This is a required field
+2) num_of_disks:-				   Number of Disks to be attached
+													 This is a required field
 
-3) disk_size_1					 Size for additional disk number 1. Size in GB
-												 This is a required field
+3) disk_size_1:-					 Size for additional disk number 1. Size in GB
+													 This is a required field
 
-4) storage_template_1		 Storage template name for disk number 1
-												 This is a required field
+4) storage_template_1:-		 Storage template name for disk number 1
+													 This is a required field
 
-5) multi_attach_1				 Multi Attach property for disk number 1
-												 This is a required field
+5) multi_attach_1:-				 Multi Attach property for disk number 1
+													 This is a required field
 
 If more than one disk to be attached:
   define disk_size_2, storage_template_2, multi_attach_2
