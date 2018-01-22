@@ -162,91 +162,93 @@ Section 6:
 Section 7:
 ** Column descriptions for Build CSV sheet **
 
-------------------------------------------------------------------------------------------------------
-|	Column Title          |				Description					  |	Accepted Value(s)	|				Remarks    				 |
-------------------------------------------------------------------------------------------------------
-| S.No				          |	Serial Number of LPAR list	|		integer					|		required field				 |
-------------------------------------------------------------------------------------------------------
-|	lpar_name		          |	Name of LPAR / VM					  |		VM name					|		required field				 |
-------------------------------------------------------------------------------------------------------
-|	image				          |	Image to be used for deploy	|		Image name			|		Image must be existing |
-------------------------------------------------------------------------------------------------------
-|	spec_type		          |	Specification Type          | openstack (or)    | use compute template     |
-|                       |                             | powervm			      | use advanced LPAR specs  |
-------------------------------------------------------------------------------------------------------
-|	compute_template      |	Compute Template (Flavor)   |		Flavor name			|	required when spec_type  |
-|                       |                             |                   | is openstack             |
-------------------------------------------------------------------------------------------------------
-|	additional_disk_file  |	File Name to provide specs 	|		none (or) 	    |	none: no additional disk |
-|                       |  for additional disks       |   File name       |                          |
-------------------------------------------------------------------------------------------------------
-|	network_name				  |	Name of the network 		    |		string					| network must be existing |
-------------------------------------------------------------------------------------------------------
-|	ip_address					  |	IP Address for the LPAR	    |	auto (or)         | IP picked from ip pool   |  
-|                       |                             | valid IP address  |	User specified IP		     |
-------------------------------------------------------------------------------------------------------
-|	desired_ec					  |	Desired Entitled Capacity		|	floating point    | required when spec_type  |
-|                       |                             | number	          |	is powervm				       |
-------------------------------------------------------------------------------------------------------
-|	desired_vcpu				  |	Desired Virutal CPU					|		integer					|	required when spec_type  |
-|                       |                             |                   | is powervm               |
-------------------------------------------------------------------------------------------------------
-|	desired_mem					  |	Desired Memory (MB)					|		integer					|	required when spec_type  |
-|                       |                             |                   | is powervm               |
-------------------------------------------------------------------------------------------------------
-|	min_ec						    |	Minimum Entitled Capacity	  |	floating point 		|	required when spec_type  |
-|				  				      |											        |	number						| is powervm						   |
-------------------------------------------------------------------------------------------------------
-|	max_ec						    |	Maximum Entitled Capacity		|	floating point 		|	required when spec_type  |
-|				  				      |											        | number						| is powervm						   |  
-------------------------------------------------------------------------------------------------------
-|	min_vcpu					    |	Minimum Virtual CPU					|		integer					|	required when spec_type  |
-|				  				      |											        |										|	is powervm					     |
-------------------------------------------------------------------------------------------------------
-|	max_vcpu					    |	Maximum Virtual CPU					|		integer					|	required when spec_type  |
-|				  				      |											        |										|	is powervm					     |
-------------------------------------------------------------------------------------------------------
-|	shared_weight				  |	Uncapped Shared Weight			|		integer					|	required when spec_type	 |
-|								        |											        |		(0 - 255)		    |	is powervm        			 |
-------------------------------------------------------------------------------------------------------
-|	shared_proc_pool_name |	Shared Processor Pool Name	|		string					|	required when spec_type	 |
-|								        |											        |										|	is powervm				       |
-------------------------------------------------------------------------------------------------------
-|	min_mem						    |	Minimum Memory							|		integer					|	required when spec_type	 |
-|								        |											        |										| is powervm				       |
-------------------------------------------------------------------------------------------------------
-|	max_mem						    |	Maximum Memory							|		intger					|	required when spec_type	 |
-|								        |											        |										|	is powervm				       |
-------------------------------------------------------------------------------------------------------  
-|	proc_comp_mode				|	Processor Compatibility Mode|		string					|	required when spec_type  |
-|								        |											        |										|	is powervm				       |
-------------------------------------------------------------------------------------------------------
-|	stor_conn_grp				  |	Storage Connectivity 			  |		string					|	SCG must be supported 	 |
-|								        |	Group name									|					          |	for chosen image				 |
-------------------------------------------------------------------------------------------------------
-|	srr_cap						    |	Simplified Remote 	        |		true or false		|	required when spec_type  |
-|                       |   Restart Capability        |                   | is powervm               |
-------------------------------------------------------------------------------------------------------  
-|	availability_priority	|	Availability priority 			|		0 - 255					|	required when spec_type  |
-|                       |   for SRR                   |                   | is powervm               |
-------------------------------------------------------------------------------------------------------
+Column Title                Column Description           
+
+1) S.No				             Serial Number of LPAR list. This is a required field
+
+2) lpar_name		           Name of LPAR / VM. This is a required field
+
+3) image				           Image to be used for deploy. This is a required field
+
+4) spec_type		           Specification Type can be openstack (or) powervm
+
+5) compute_template        Compute Template (Flavor).
+													 This is a required field when spec_type is openstack
+
+6) additional_disk_file    File Name to provide specs for additional disks.
+													 Specify none if there are no additional disks
+
+7) network_name				     Name of the network
+
+8) ip_address					     IP Address for the LPAR
+													 Specify 'auto' if you want IP be picked from the pool
+													 Specify valid IP address if you need specific IP address
+
+9) desired_ec					     Desired Entitled Capacity.
+													 This is required when spec_type is powervm
+
+10) desired_vcpu				   Desired Virutal CPU.
+													 This is required when spec_type is powervm
+
+11) desired_mem					   Desired Memory (MB).
+													 This is required when spec_type is powervm
+
+12) min_ec						     Minimum Entitled Capacity.
+													 This is required when spec_type is powervm
+
+13) max_ec						     Maximum Entitled Capacity.
+													 This is required when spec_type is powervm
+
+14) min_vcpu					     Minimum Virtual CPU.
+													 This is required when spec_type is powervm
+
+15) max_vcpu					     Maximum Virtual CPU.
+													 This is required when spec_type is powervm
+
+16) shared_weight				   Uncapped Shared Weight. Value must be (0 - 255)
+													 This is required when spec_type is powervm
+
+17) shared_proc_pool_name  Shared Processor Pool Name.
+													 This is required when spec_type is powervm
+
+18) min_mem						     Minimum Memory.
+													 This is required when spec_type is powervm
+
+19) max_mem						     Maximum Memory.
+													 This is required when spec_type is powervm
+
+20) proc_comp_mode				 Processor Compatibility Mode.
+													 This is required when spec_type is powervm
+
+21) stor_conn_grp				   Storage Connectivity Group Name.
+													 This is required when spec_type is powervm
+
+22) srr_cap						     Simplified Remote Restart Capability. Specify true or false
+													 This is required when spec_type is powervm.
+
+23) availability_priority	 Availability priority Value must be (0 - 255)
+													 This is required when spec_type is powervm
 
 Section 8:
 ** Column descriptions for Additional Storage CSV sheet **
-------------------------------------------------------------------------------------------------------
-|	Column Title          |				Description					  |	Accepted Value(s)	|				Remarks    				 |
-------------------------------------------------------------------------------------------------------
-|	lpar_name					    |	VM name for which disks 		|		string					|	required field				   |           
-------------------------------------------------------------------------------------------------------
-| num_of_disks				  |	Number of Disks         		|		Integer					|	required field				   |
-------------------------------------------------------------------------------------------------------
-|	disk_size_1					  |	Size for additional 		  	|		Size in GB			|	required field				   |
-|                       | disk number 1               |                   |                          |
-------------------------------------------------------------------------------------------------------
-|	storage_template_1		|	Storage template name 	    |		string					|	required field				   |
-------------------------------------------------------------------------------------------------------
-|	multi_attach_1				|	Multi Attach property 		 	|		true or false		|	required field				   |
-------------------------------------------------------------------------------------------------------
+
+Column Title                Column Description
+
+1) lpar_name					   VM name for which disks to be attached        
+												 This is a required field
+
+2) num_of_disks				   Number of Disks to be attached
+												 This is a required field
+
+3) disk_size_1					 Size for additional disk number 1. Size in GB
+												 This is a required field
+
+4) storage_template_1		 Storage template name for disk number 1
+												 This is a required field
+
+5) multi_attach_1				 Multi Attach property for disk number 1
+												 This is a required field
+
 If more than one disk to be attached:
   define disk_size_2, storage_template_2, multi_attach_2
 				 disk_size_3, storage_template_3, multi_attach_3 and so on..
