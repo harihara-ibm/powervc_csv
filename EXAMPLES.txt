@@ -1,0 +1,104 @@
+
+Examples
+
+=====
+QUERY
+=====
+
+Querying for vms
+$ ruby powervc_csv.rb query vms
+
+Querying for Flavors
+$ ruby powervc_csv.rb query flavors
+
+Querying for Volumes
+$ ruby powervc_csv.rb query volumes
+
+Querying for Networks
+$ ruby powervc_csv.rb query networks
+
+Querying for Host Groups
+$ ruby powervc_csv.rb query host_groups
+
+Querying for Images
+$ ruby powervc_csv.rb query images
+
+Querying for Storage Templates
+$ ruby powervc_csv.rb query storage_templates
+
+Querying for  Projects
+$ ruby powervc_csv.rb query projects
+
+Querying for Storage Providers
+$ ruby powervc_csv.rb query storage_providers
+
+Querying for Fabrics
+$ ruby powervc_csv.rb query fabrics
+
+Querying for SCG
+$ ruby powervc_csv.rb query scg
+
+Querying for All resources
+$ ruby powervc_csv.rb query all
+
+####################################################################################################
+
+======
+REPORT
+======
+
+Create report for VMs
+$ ruby powervc_csv.rb report vms
+
+Create report for  Flavors
+$ ruby powervc_csv.rb report flavors
+
+Create report for Networks
+$ ruby powervc_csv.rb report networks
+
+Create report for Volumes
+$ ruby powervc_csv.rb report volumes
+
+Create report for Storage Templates
+$ ruby powervc_csv.rb report storage_templates
+
+Create report for Storage Providers
+$ ruby powervc_csv.rb report storage_providers
+
+Create report for SCG
+$ ruby powervc_csv.rb report scg
+
+Create report for All resources
+$ ruby powervc_csv.rb report all
+
+
+####################################################################################################
+
+=====
+BUILD
+=====
+
+Building VMs/LPARs using lpar_build_sample.csv as the input file
+$ ruby powervc_csv.rb build csv/lpar_build_sample.csv
+
+
+####################################################################################################
+
+===========
+ADD-STORAGE
+===========
+
+Adding storage volumes to existing VMs
+
+$ ruby powervc_csv.rb add-storage csv/volumes_add_sample.csv
+
+####################################################################################################
+
+======
+DELETE
+======
+
+Deleting LPARs
+$ ruby powervc_csv.rb delete newlpar1,newlpar2,newlpar3,newlpar4
+
+####################################################################################################

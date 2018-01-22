@@ -1,0 +1,13 @@
+## This file is used to provide the PowerVC URL and user credentials
+## fill the url with the actual PowerVC hostname or IP Address
+## provide a vaid user ID and password
+## url = https://<powervc-host-name-or-ipaddress>:5000/v3/auth/tokens
+## user = root
+## password = password
+## project = ibm-default
+## ssl_ca_file = <path_to_ssl_file>
+url = https://<>/v3/auth/tokens
+user = 
+password = 
+project = 
+ssl_ca_file = 

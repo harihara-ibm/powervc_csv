@@ -1,0 +1,5 @@
+S.No,lpar_name,num_of_disks,disk_name_1,disk_size_1,storage_template_1,multi_attach_1,disk_name_2,disk_size_2,storage_template_2,multi_attach_2,disk_name_3,disk_size_3,storage_template_3,multi_attach_3,disk_name_4,disk_size_4,storage_template_4,multi_attach_4,disk_name_5,disk_size_5,storage_template_5,multi_attach_5,disk_name_6,disk_size_6,storage_template_6,multi_attach_6,disk_name_7,disk_size_7,storage_template_7,multi_attach_7,disk_name_8,disk_size_8,storage_template_8,multi_attach_8,disk_name_9,disk_size_9,storage_template_9,multi_attach_9,disk_name_10,disk_size_10,storage_template_10,multi_attach_10
+1,lparnew1,1,appvg1,10,h57_cluster base template,TRUE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2,lparnew2,1,appvg2,10,h57_cluster base template,TRUE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+3,lparnew3,1,appvg3,10,h57_cluster base template,TRUE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4,lparnew4,1,appvg4,10,h57_cluster base template,TRUE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

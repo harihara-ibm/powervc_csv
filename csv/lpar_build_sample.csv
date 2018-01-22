@@ -1,0 +1,5 @@
+S.No,lpar_name,image,spec_type,compute_template,additional_disk_file,network_name,ip_address,desired_ec,desired_vcpu,desired_mem,min_ec,max_ec,min_vcpu,max_vcpu,shared_weight,shared_proc_pool_name,min_mem,max_mem,proc_comp_mode,stor_conn_grp,srr_capability,availability_priority
+1,lparnew1,aix_new,openstack,powervm.small,csv/volumes_add_sample.csv,PROD57,192.168.16.19,,,,,,,,,,,,,,,
+3,lparnew3,aix_new,powervm,,csv/volumes_add_sample.csv,PROD57,192.168.16.18,0.5,2,4096,0.1,4,1,4,128,DefaultPool,2048,8192,default,Any host in h57_cluster,TRUE,200
+2,lparnew2,aix_new,openstack,powervm.small,csv/volumes_add_sample.csv,new_HMC57,auto,,,,,,,,,,,,,,,
+4,lparnew4,aix_new,powervm,,csv/volumes_add_sample.csv,new_HMC57,auto,0.5,2,4096,0.1,4,1,4,128,DefaultPool,2048,8192,default,Any host in h57_cluster,TRUE,200
